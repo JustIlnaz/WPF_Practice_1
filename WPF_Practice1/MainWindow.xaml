@@ -1,0 +1,179 @@
+﻿<Window x:Class="WPF_Practice1.MainWindow"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:local="clr-namespace:WPF_Practice1"
+            mc:Ignorable="d"
+            Title="Карточка сотрудника" Height="450" Width="800 ">
+
+
+
+
+    <Grid  Background="Beige">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="7*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="39*"/>
+            <ColumnDefinition Width="61*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image  HorizontalAlignment="Left" VerticalAlignment="Center" Height="224" Width="260" Margin="17,0,0,0" Grid.Column="0"  Source="/6774528335.jpg"/>
+        <Button Grid.Column="0" Width="100" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="17,265,0,0" Grid.RowSpan="2">Выбрать фото</Button>
+        <Button Grid.Column="0" Width="150" Height="20"  VerticalAlignment="Top" HorizontalAlignment="Left" Margin="17,40,0,0" Grid.Row="1">👩🏿‍🤝‍🧑🏾Штатное расписание</Button>
+        <Button Grid.Column="0" Width="150" Height="20"  VerticalAlignment="Top" HorizontalAlignment="Left" Margin="17,70,0,0" Grid.Row="1">🤷‍♂️Отпуска работника</Button>
+        <Button Grid.Column="0" Width="181" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="17,100,0,0" Grid.Row="1">🐱‍🏍Командировки работника</Button>
+
+        <TabControl Margin="5,5,5,5" Grid.Row="0" Grid.Column="1">
+            <TabItem Header="Дополнительные данные" Margin="0,-2,-42,0">
+
+
+                <Grid  Height="211">
+
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition Width="Auto" MinWidth="75"/>
+
+                        <ColumnDefinition Width="Auto" MinWidth="351"/>
+
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+
+                        <RowDefinition Height="50.917"/>
+                        <RowDefinition Height="48.043"/>
+
+                    </Grid.RowDefinitions>
+
+                    <TextBlock HorizontalAlignment="Left"  TextWrapping="Wrap" Text="ИНН:" VerticalAlignment="Top" Margin="10,10,0,0" Height="16" Width="29" FontSize="10"/>
+                    <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="39" Margin="10,26,0,0" Height="15"/>
+
+                    <TextBlock Margin="10,3,290,17" Grid.ColumnSpan="2" FontSize="10" Grid.Row="1" >Место регистации</TextBlock>
+
+                    <TextBlock HorizontalAlignment="Left" Width="55" Margin="18,19,0,-10" FontSize="10" Grid.Row="1">Индекс:</TextBlock>
+                    <TextBox Width="55" HorizontalAlignment="Left" Margin="18,35,0,-5"  Grid.Row="1"/>
+
+                    <TextBlock VerticalAlignment="Top" Height="20" FontSize="10" Margin="25,19,282,0" Grid.Row="1" Grid.Column="1"><Run Text="Адрес:"/></TextBlock>
+                    <TextBox Width="250" HorizontalAlignment="Left" Margin="25,36,0,-5" Grid.Row="1" Grid.Column="1"/>
+
+                    <TextBlock FontSize="10" Grid.Row="1"  Text="Место жительство фактическое"  Grid.ColumnSpan="2" Margin="10,58,0,-28" HorizontalAlignment="Left" Width="224" />
+                    <TextBlock HorizontalAlignment="Left" Width="55" Margin="18,72,0,-66" FontSize="10" Grid.Row="1">Индекс:</TextBlock>
+                    <TextBox Width="55" HorizontalAlignment="Left" Margin="18,86,0,-59"  Grid.Row="1"/>
+
+                    <TextBlock  Height="20" FontSize="10"  Grid.Row="1" Grid.Column="1" Margin="25,72,295,-44"><Run Text="Адрес:"/></TextBlock>
+                    <TextBox Width="250" HorizontalAlignment="Left" Margin="25,87,0,-59" Grid.Row="1" Grid.Column="1"/>
+
+                    <TextBlock  FontSize="10" Height="22" Margin="10,113,10,-87" Grid.Row="1" TextWrapping="Wrap" Text="Телефоны:"/>
+                    <TextBox Grid.Row="1" Margin="65,0,-30,-88" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Height="22" VerticalAlignment="Bottom" />
+                </Grid>
+            </TabItem>
+
+
+            <TabItem Width="250" Header="Основные данные"  Margin="41,-2,0,0" >
+                <Grid Margin="0,4,0,0">
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition Width="Auto" MinWidth="100"/>
+
+                        <ColumnDefinition Width="Auto" MinWidth="326"/>
+
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+
+                        <RowDefinition Height="69"/>
+                        <RowDefinition Height="29.96"/>
+
+                    </Grid.RowDefinitions>
+
+                    <TextBlock FontSize="10" HorizontalAlignment="Left" Margin="10,4,0,0" TextWrapping="Wrap" Text="Таб №" VerticalAlignment="Top" Height="20" Width="46"/>
+                    <TextBox HorizontalAlignment="Left" Margin="44,3,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" Height="20"/>
+
+                    <TextBlock Margin="20,4,0,0" FontSize="10" Grid.Column="1">Пол:</TextBlock>
+                    <RadioButton Grid.Column="1" FontSize="10" Content="жен" HorizontalAlignment="Left" Margin="114,7,0,0" VerticalAlignment="Top" Height="14" Width="37" />
+                    <RadioButton Grid.Column="1" FontSize="10" Content="муж" HorizontalAlignment="Left" Margin="51,7,0,0" VerticalAlignment="Top" Height="14" Width="38"/>
+
+                    <TextBlock HorizontalAlignment="Left" FontSize="10" Height="15" Margin="10,0,0,0" TextWrapping="Wrap" Text="Фамилия:" VerticalAlignment="Center" Width="69"/>
+                    <TextBlock Margin="20,28,0,0" Grid.Column="1" FontSize="10" HorizontalAlignment="Left" Width="22" >Имя:</TextBlock>
+                    <TextBlock Margin="125,28,0,0" Grid.Column="1" FontSize="10" HorizontalAlignment="Left" Width="45" >Отчество:</TextBlock>
+                    <TextBox HorizontalAlignment="Center" Margin="0,43,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="80" Height="18" />
+                    <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="20,42,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="100" Height="18" />
+                    <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="125,42,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="201" Height="18" />
+
+                    <TextBlock Margin="16,1,320,5" Text="Место рождения" FontSize="10" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" />
+                    <TextBlock  Margin="16,18,44,-6" Grid.Column="0" Grid.Row="1" FontSize="10" Width="40"  ><Run Text="Страна"/><Run Language="ru-ru" Text=":"/></TextBlock>
+                    <TextBlock  Margin="16,41,320,-25" FontSize="10" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" ><Run Text="Город"/><Run Language="ru-ru" Text=":"/></TextBlock>
+                    <TextBlock Margin="16,95,320,-78" FontSize="10" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" ><Run Text="Область"/><Run Language="ru-ru" Text=":"/></TextBlock>
+                    <TextBlock Margin="16,67,320,-51" FontSize="10" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" ><Run Text="Район"/><Run Language="ru-ru" Text=":"/></TextBlock>
+                    <TextBox HorizontalAlignment="Left" Margin="64,17,0,-7" Grid.Row="1" TextWrapping="Wrap" Width="137" Grid.ColumnSpan="2"/>
+                    <TextBox HorizontalAlignment="Left" Margin="64,39,0,-29" Grid.Row="1" TextWrapping="Wrap" Width="137" Grid.ColumnSpan="2"/>
+                    <TextBox HorizontalAlignment="Left" Margin="64,64,0,-54" Grid.Row="1" TextWrapping="Wrap" Width="137" Grid.ColumnSpan="2"/>
+                    <TextBox HorizontalAlignment="Left" Margin="64,92,0,-82" Grid.Row="1" TextWrapping="Wrap" Width="137" Grid.ColumnSpan="2"/>
+
+                    <TextBlock FontSize="10" Grid.Column="1" HorizontalAlignment="Left" Margin="118,0,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Дата рождения:" VerticalAlignment="Top"/>
+                    <TextBox Grid.Row="1" Grid.Column="1" Margin="119,17,119,-3"/>
+
+                    <TextBlock FontSize="10" Text="Семейное положение:" Grid.Column="1" HorizontalAlignment="Left" Margin="118,37,0,-25" Grid.Row="1"  Width="128"/>
+                    <ComboBox Grid.Column="1" Grid.Row="1" Margin="118,51,-28,-44" >
+                        <TextBlock>Женат(замужем)</TextBlock>
+                        <TextBlock>Холост(не замужем)</TextBlock>
+                        
+                    </ComboBox>
+
+                    <TextBlock FontSize="10" Text="Образование:" Height="26" Grid.Column="1" HorizontalAlignment="Left" Margin="119,76,0,-72" Grid.Row="1"  Width="128"/>
+                    <ComboBox Grid.Column="1" Grid.Row="1" Margin="119,95,-28,-90" Height="25">
+                        <TextBlock>Высшее образование</TextBlock>
+                        <TextBlock>Среднее специалное образование</TextBlock>
+                        <TextBlock>Не окончаное высшее образование</TextBlock>
+                        <TextBlock>Среднее образование</TextBlock>
+
+                    </ComboBox>
+
+
+                </Grid>
+            </TabItem>
+
+
+            <TabItem Header="Состав семьи" >
+
+            </TabItem>
+
+            <TabItem Header="Должности" >
+                <Grid  Height="211">
+
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition Width="Auto" MinWidth="75"/>
+
+                        <ColumnDefinition Width="Auto" MinWidth="351"/>
+
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+
+                        <RowDefinition Height="50.917"/>
+                        <RowDefinition Height="48.043"/>
+    
+                    </Grid.RowDefinitions>
+                    </Grid>
+            </TabItem>
+
+            <TabItem Header="Документы"  Margin="-2,0,-2,0" VerticalAlignment="Center" >
+
+            </TabItem>
+
+            <TabItem Header="Образование">
+
+            </TabItem>
+
+
+
+        </TabControl>
+
+
+
+    </Grid>
+</Window>
