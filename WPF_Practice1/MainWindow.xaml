@@ -23,9 +23,14 @@
 
         <Image  HorizontalAlignment="Left" VerticalAlignment="Center" Height="224" Width="260" Margin="17,0,0,0" Grid.Column="0"  Source="/6774528335.jpg"/>
         <Button Grid.Column="0" Width="100" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="17,265,0,0" Grid.RowSpan="2">Выбрать фото</Button>
-        <Button Grid.Column="0" Width="150" Height="20"  VerticalAlignment="Top" HorizontalAlignment="Left" Margin="17,40,0,0" Grid.Row="1">👩🏿‍🤝‍🧑🏾Штатное расписание</Button>
-        <Button Grid.Column="0" Width="150" Height="20"  VerticalAlignment="Top" HorizontalAlignment="Left" Margin="17,70,0,0" Grid.Row="1">🤷‍♂️Отпуска работника</Button>
-        <Button Grid.Column="0" Width="181" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="17,100,0,0" Grid.Row="1">🐱‍🏍Командировки работника</Button>
+        <Button Grid.Column="0" Width="150" Height="20"  VerticalAlignment="Top" HorizontalAlignment="Left" Margin="17,40,0,0" Grid.Row="1">🧑‍🤝‍🧑Штатное расписание</Button>
+        <Button Grid.Column="0" Width="150" Height="20"  VerticalAlignment="Top" HorizontalAlignment="Left" Margin="17,70,0,0" Grid.Row="1">⭐Отпуска работника</Button>
+        <Button Grid.Column="0" Width="181" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="17,100,0,0" Grid.Row="1">🕛Командировки работника</Button>
+
+        <Button Content="✉️Поощрения работника" Grid.Column="1" Grid.Row="1" Height="28" Width="160" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,50"/>
+        <Button Content="🖨️Печать личной карточки"  Grid.Column="1" Grid.Row="1" Height="28" Width="160" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,10"/>
+        <Button Content="✅ок" Grid.Column="1" Grid.Row="1" Width="75" Height="28" VerticalAlignment="Bottom" Margin="0,0,98,10" HorizontalAlignment="Right"/>
+        <Button Content="❌Отмена" Grid.Column="1" Grid.Row="1" Width="75" Height="28" VerticalAlignment="Bottom" Margin="10" HorizontalAlignment="Right"/>
 
         <TabControl Margin="5,5,5,5" Grid.Row="0" Grid.Column="1">
             <TabItem Header="Дополнительные данные" Margin="0,-2,-42,0">
@@ -50,7 +55,6 @@
 
                     <TextBlock HorizontalAlignment="Left"  TextWrapping="Wrap" Text="ИНН:" VerticalAlignment="Top" Margin="10,10,0,0" Height="16" Width="29" FontSize="10"/>
                     <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="39" Margin="10,26,0,0" Height="15"/>
-
                     <TextBlock Margin="10,3,290,17" Grid.ColumnSpan="2" FontSize="10" Grid.Row="1" >Место регистации</TextBlock>
 
                     <TextBlock HorizontalAlignment="Left" Width="55" Margin="18,19,0,-10" FontSize="10" Grid.Row="1">Индекс:</TextBlock>
@@ -90,7 +94,7 @@
                     </Grid.RowDefinitions>
 
                     <TextBlock FontSize="10" HorizontalAlignment="Left" Margin="10,4,0,0" TextWrapping="Wrap" Text="Таб №" VerticalAlignment="Top" Height="20" Width="46"/>
-                    <TextBox HorizontalAlignment="Left" Margin="44,3,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" Height="20"/>
+                    <TextBox HorizontalAlignment="Left" Margin="44,3,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" Height="20" Text=""/>
 
                     <TextBlock Margin="20,4,0,0" FontSize="10" Grid.Column="1">Пол:</TextBlock>
                     <RadioButton Grid.Column="1" FontSize="10" Content="жен" HorizontalAlignment="Left" Margin="114,7,0,0" VerticalAlignment="Top" Height="14" Width="37" />
@@ -120,7 +124,7 @@
                     <ComboBox Grid.Column="1" Grid.Row="1" Margin="118,51,-28,-44" >
                         <TextBlock>Женат(замужем)</TextBlock>
                         <TextBlock>Холост(не замужем)</TextBlock>
-                        
+
                     </ComboBox>
 
                     <TextBlock FontSize="10" Text="Образование:" Height="26" Grid.Column="1" HorizontalAlignment="Left" Margin="119,76,0,-72" Grid.Row="1"  Width="128"/>
@@ -144,29 +148,105 @@
             <TabItem Header="Должности" >
                 <Grid  Height="211">
 
-                    <Grid.ColumnDefinitions>
-
-                        <ColumnDefinition Width="Auto" MinWidth="75"/>
-
-                        <ColumnDefinition Width="Auto" MinWidth="351"/>
-
-                    </Grid.ColumnDefinitions>
-
                     <Grid.RowDefinitions>
 
                         <RowDefinition Height="50.917"/>
                         <RowDefinition Height="48.043"/>
-    
+
+
                     </Grid.RowDefinitions>
-                    </Grid>
+
+                    <TextBlock Text="Штат. Расписание:" Grid.Row="0" Margin="8,13,12,18"/>
+                    <ComboBox Grid.Row="0" Margin="116,13,290,18" >
+                        <TextBlock Text="001"/>
+                        <TextBlock Text="002"/>
+                        <TextBlock Text="003"/>
+                    </ComboBox>
+
+                    <TextBlock Text="Характер работы:" Grid.Row="0" Margin="207,13,-172,20"/>
+                    <ComboBox Margin="306,13,12,18" >
+                        <TextBlock Text="Постоянно"/>
+                        <TextBlock Text="Не полная занятость"/>
+                    </ComboBox>
+
+                    <TextBlock Text="Принят на работу с:" Grid.Row="1" Margin="8,2,355,22"/>
+                    <TextBox Grid.Row="1" Height="20" Margin="122,2,270,26" />
+                    <TextBlock Text="по:" Grid.Row="1" Margin="215,4,177,24" Height="20" Width="80" RenderTransformOrigin="0.867,1.359"/>
+                    <TextBox Grid.Row="1" Margin="236,2,156,26"  />
+
+                    <TextBlock Grid.Row="1" Text="Ставка:" Height="20" Width="50" Margin="8,26,414,2"/>
+                    <TextBox Grid.Row="1"  Margin="8,44,384,-16" RenderTransformOrigin="0.5,0.109"/>
+                    <TextBlock Grid.Row="1" Margin="93,43,361,-17" Text="*" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.317,0.58"/>
+
+                    <TextBlock Grid.Row="1" Text="Оклад, тн:" Height="20" Margin="116,26,290,2"/>
+                    <TextBox Grid.Row="1"  Margin="116,45,276,-17" RenderTransformOrigin="0.5,0.109"/>
+                    <TextBlock Grid.Row="1" Margin="207,41,238,-14" Text="+" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.317,0.58"/>
+
+                    <TextBlock Grid.Row="1" Text="Надбавка, тн:" Height="20" Margin="228,26,160,2"/>
+                    <TextBox Grid.Row="1"  Margin="228,45,165,-17" RenderTransformOrigin="0.5,0.109" />
+                    <TextBlock Grid.Row="1" Margin="312,41,137,-14" Text="=" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.317,0.58"/>
+
+                    <TextBlock Grid.Row="1" Text="Зар.плата, тн:" Height="20" Width="100" Margin="333,26,39,2" RenderTransformOrigin="0.5,0.392"/>
+                    <TextBox Grid.Row="1"  Margin="333,45,60,-17" RenderTransformOrigin="0.5,0.109" />
+                    <TextBlock Grid.Row="1" Margin="312,41,137,-14" Text="=" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.317,0.58"/>
+
+                    <TextBlock Text="Договор №" Grid.Row="1" Height="20" Width="64" HorizontalAlignment="Left" Margin="10,69,0,-41"/>
+                    <TextBox Grid.Row="1"  Margin="79,70,317,-41" />
+                    <TextBlock Text="от" Grid.Row="1" Width="25" HorizontalAlignment="Left" Margin="171,70,0,-41" />
+                    <TextBox Grid.Row="1"  Margin="193,70,189,-41" />
+                    <CheckBox Content="Уволен" Grid.Row="1" Height="28" Width="100" HorizontalAlignment="Left" Margin="11,94,0,-74"/>
+                    <Button Content="📁Приказ о приеме на работу" Grid.Row="1"  Margin="42,108,252,-88" />
+                    <Button Content="📂Приказ об увольнении" Grid.Row="1"  Margin="255,108,17,-88"/>
+                </Grid>
             </TabItem>
+
 
             <TabItem Header="Документы"  Margin="-2,0,-2,0" VerticalAlignment="Center" >
 
             </TabItem>
-
             <TabItem Header="Образование">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100.96"/>
+                        <RowDefinition Height="0"/>
+                    </Grid.RowDefinitions>
 
+                    <TextBlock Grid.Row="0" Text="Код документа:" HorizontalAlignment="Left" Width="90" Margin="10,10,0,61"/>
+                    <ComboBox Grid.Row="0" Margin="100,10,286,68">
+                        <TextBlock Text="0006"/>
+                        <TextBlock Text="0007"/>
+                        <TextBlock Text="0008"/>
+                    </ComboBox>
+
+                    <TextBlock Text="Год окончания:" Grid.Row="0" HorizontalAlignment="Right" Height="28" VerticalAlignment="Top" Margin="0,10,103,0" Width="85" />
+                    <TextBox Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" Width="70" Height="21" Margin="0,10,21,0"/>
+
+                    <TextBlock Text="Учереждение:" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,34,0,0" Height="16" Width="78"/>
+                    <TextBox Grid.Row="0"  VerticalAlignment="Top" Height="17" Margin="100,36,21,0"/>
+
+                    <TextBlock Text="Квалификация:" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,55,0,0" Height="16" Width="83"/>
+                    <TextBox Grid.Row="0"  VerticalAlignment="Top" Height="18" Margin="100,54,21,0"/>
+
+                    <TextBlock Text="Специальность:" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,77,0,0" Height="16" Width="87"/>
+                    <TextBox Grid.Row="0"  VerticalAlignment="Top" Height="21" Margin="100,75,21,0"/>
+
+                    <DataGrid  x:Name="dataGrid" Height="109.4" Margin="0,0,0,-109" Grid.Row="1">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn/>
+                            <DataGridTextColumn Header="Документ" Binding="{Binding Documents}" Width="118"/>
+
+                            <DataGridTextColumn Header="Учреждение" Binding="{Binding Institution}" Width="118"/>
+
+                            <DataGridTextColumn Header="Квалификация" Binding="{Binding Qualification}" Width="118"/>
+
+                            <DataGridTextColumn Header="Специальность" Binding="{Binding Speciality}" Width="116"/>
+                        </DataGrid.Columns>
+
+
+
+                    </DataGrid>
+
+                </Grid>
             </TabItem>
 
 
